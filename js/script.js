@@ -8,42 +8,42 @@
 // 1. creo le variabili di cui avrò bisogno per stampare in pagina
 var schedaStudente = document.getElementById("studente");
 var schedaStudenti = document.getElementById("studenti");
-var schedaNuovi = document.getElementById("nuovo-studente");
+// var schedaNuovi = document.getElementById("nuovo-studente");
 
 // 2. creo il primo oggetto studente
 var studente = {
-    Nome: "Roberto",
-    Cognome: "Zeppilli",
-    Età: 29
+    nome: "Roberto",
+    cognome: "Zeppilli",
+    età: 29
 };
 
 // 2.1 lo stampo in pagina tramite un ciclo for-in
 for (var chiave in studente) {
     // console.log(chiave + ":", studente[chiave]);
-    schedaStudente.innerHTML += "<li>" + chiave + " : " + studente[chiave] + "</li>";
+    schedaStudente.innerHTML += "<li>" + chiave[0].toUpperCase() + chiave.toLowerCase().slice(1) + " : " + studente[chiave] + "</li>";
 }
 
 // 3. creo un array di oggetti contente i dati di 4 studenti
 var studenti = [
     {
-        Nome: "Andrea",
-        Cognome: "Barsi",
-        Età: 22
+        nome: "Andrea",
+        cognome: "Barsi",
+        età: 22
     },
     {
-        Nome: "Paolo",
-        Cognome: "Crespi",
-        Età: 28
+        nome: "Paolo",
+        cognome: "Crespi",
+        età: 28
     },
     {
-        Nome: "Barbara",
-        Cognome: "Bianchi",
-        Età: 24
+        nome: "Barbara",
+        cognome: "Bianchi",
+        età: 24
     },
     {
-        Nome: "Giulia",
-        Cognome: "Nicolini",
-        Età: 32
+        nome: "Giulia",
+        cognome: "Nicolini",
+        età: 32
     },
 ];
 
@@ -51,7 +51,7 @@ var studenti = [
 for (var i = 0; i < studenti.length; i++) {
     var singoloStudente = studenti[i];
     // console.log(singoloStudente.nome, singoloStudente.cognome);
-    schedaStudenti.innerHTML += "<li>" + singoloStudente.Nome + " " + singoloStudente.Cognome + "</li>";
+    schedaStudenti.innerHTML += "<li>" + singoloStudente.nome + " " + singoloStudente.cognome + "</li>";
 
 }
 
@@ -72,9 +72,9 @@ do {
 
 // 4.1 creo un oggetto in cui inserisco le varibili precedenti come valore delle chiavi
 var nuovoStudente = {
-    Nome: nuovoNome,
-    Cognome: nuovoCognome,
-    Età: nuovaEta
+    nome: nuovoNome,
+    cognome: nuovoCognome,
+    età: nuovaEta
 }
 
 // 4.2 aggiungo i dati del nuovo studente (inseriti dall'utente) all'interno dell'array di oggetti 
@@ -82,5 +82,5 @@ studenti.push(nuovoStudente);
 console.log(studenti);
 
 // 4.3 stampo in pagina i dati del nuovo studente 
-schedaStudenti.innerHTML += "<li>" + nuovoStudente.Nome + " " + nuovoStudente.Cognome + "</li>";
+schedaStudenti.innerHTML += "<li>" + nuovoStudente.nome + " " + nuovoStudente.cognome + "</li>";
 

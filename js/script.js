@@ -74,7 +74,7 @@ do {
 var nuovoStudente = {
     Nome: nuovoNome,
     Cognome: nuovoCognome,
-    Eta: nuovaEta
+    Età: nuovaEta
 }
 
 // 4.2 aggiungo i dati del nuovo studente (inseriti dall'utente) all'interno dell'array di oggetti 

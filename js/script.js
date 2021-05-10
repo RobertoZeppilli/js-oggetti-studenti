@@ -79,9 +79,8 @@ var nuovoStudente = {
 
 // 4.2 aggiungo i dati del nuovo studente (inseriti dall'utente) all'interno dell'array di oggetti 
 studenti.push(nuovoStudente);
-// console.log(studenti);
+console.log(studenti);
 
-// 4.3 stampo in pagina i dati del nuovo studente inserito
-for (var chiave in nuovoStudente) {
-    schedaNuovi.innerHTML += "<li>" + chiave + " : " + nuovoStudente[chiave] + "</li>";
-}
+// 4.3 stampo in pagina i dati del nuovo studente 
+schedaStudenti.innerHTML += "<li>" + nuovoStudente.Nome + " " + nuovoStudente.Cognome + "</li>";
+
